@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace robotica
+{
+    class Program
+    {
+        static int val = 3;
+        static int[,] letras = new int[val, val];
+        static void Main(string[] args)
+        {
+            string linea;
+            for (int f = 0; f < val; f++)
+            {
+                for (int c = 0; c < val; c++)
+                {
+                    Console.WriteLine("f: " + f + "  c: " + c + "\n\n");
+                    Console.Write("Ingrese una letra: ");
+                    linea = Console.ReadLine();
+                    letras[c, f] = int.Parse(linea);
+                }
+            }
+            Console.WriteLine("\n-------------------\n");
+            for (int f = 0; f < val; f++)
+            {
+                for (int c = 0; c < val; c++)
+                {
+                    Console.WriteLine("Valor: " + letras[c, f]);
+
+                }
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
